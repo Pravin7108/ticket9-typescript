@@ -1,0 +1,272 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply h-full overflow-x-hidden dark:text-slate-300 text-slate-600 font-normal;
+  }
+  
+  .nc-box-has-hover {
+    @apply bg-[#ff5862] py-2 px-4 text-white border border-neutral-200 border-opacity-70 active:scale-95 hover:ring-1 hover:ring-[#ff99a0] hover:shadow-md hover:shadow-gray-500/50 ;
+  }
+  
+  .nc-dark-box-bg-has-hover {
+    @apply dark:bg-neutral-800 dark:bg-opacity-30  dark:border dark:border-neutral-700 dark:hover:bg-neutral-800 dark:hover:shadow-2xl;
+  }
+  
+  .nc-dark-box-bg {
+    @apply dark:bg-neutral-800 dark:bg-opacity-30  dark:border dark:border-neutral-700 dark:shadow-2xl;
+  }
+
+  .nc-box-has-hover1 {
+    @apply bg-gradient-to-r from-[#FF9650] to-[#FB426E] py-2 px-4 text-white rounded-lg border border-neutral-200 border-opacity-70 hover:ring-1 hover:ring-[#ff99a0] hover:shadow-md hover:shadow-gray-500/50 ;
+  }
+  
+  .nc-dark-box-bg-has-hover1 {
+    @apply dark:bg-neutral-800 dark:bg-opacity-30  dark:border dark:border-neutral-700 dark:hover:bg-neutral-800 dark:hover:shadow-2xl;
+  }
+
+  .app-warp {
+    &.light,
+    &.skin--default {
+      @apply bg-slate-100;
+    }
+    &.lght,
+    &.skin--bordered {
+      @apply bg-transparent;
+    }
+    &.dark {
+      @apply bg-[#0f172a] text-slate-300;
+    }
+  }
+  html,
+  body {
+    @apply h-full;
+  }
+
+  .dashcode-app-wrapper {
+    @apply relative;
+  }
+  .single-sidebar-menu .ReactCollapse--collapse {
+    transition: height 400ms;
+  }
+  .space-xy-5 {
+    > div,
+    > button,
+    > a,
+    label,
+    > * {
+      @apply mr-2 mb-2;
+    }
+  }
+  .space-xy-6 {
+    > div,
+    > button,
+    > a,
+    label,
+    > * {
+      @apply mr-4 mb-2;
+    }
+  }
+
+  html[dir="rtl"] {
+    .recharts-wrapper {
+      direction: rtl;
+    }
+    .recharts-yAxis {
+      .recharts-text {
+        text-anchor: start;
+      }
+    }
+  }
+  .dashcode-app {
+    .leaflet-control {
+      z-index: 0 !important;
+    }
+    .leaflet-control-container {
+      z-index: 555 !important;
+      position: relative;
+    }
+    .recharts-curve.recharts-tooltip-cursor {
+      display: none;
+    }
+    .recharts-wrapper.bar-chart {
+      .recharts-tooltip-cursor {
+        fill: transparent;
+      }
+    }
+    .recharts-tooltip-wrapper {
+      border: none !important;
+    }
+
+    // .recharts-cartesian-grid line,
+    // .recharts-polar-grid-angle line,
+    // .recharts-yAxis line,
+    // .recharts-xAxis line {
+    //   @apply stroke-black-200 dark:stroke-slate-700;
+    // }
+  }
+}
+
+.nc-box-has-hover{
+  border-radius: 10px;
+}
+
+
+.button-style{
+  // background: linear-gradient(to right,#FF9650,#FB426E);
+  // background: linear-gradient(to right,#2e3664 ,#181B35);
+  // background-color: #196BCA;
+  color: #fff;
+  // font-family: Trebuchet MS;
+  font-size: 16px;
+  font-weight: 500;
+  // font-style: italic;
+  text-decoration: none;
+  padding: 14px 15px;
+  // border: 0px solid #000;
+  border-radius: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right,#FF9650,#FB426E);
+}
+
+.button-style:hover{
+  // background: linear-gradient(to right,#5482d0 ,#7d5ee3);
+  background: linear-gradient(to right,#FB426E,#FF9650);
+  background-color: #FF9650;
+ }
+ .button-style:active{
+  transform: scale(0.95);
+ }
+
+ .btn-active:active{
+  transform: scale(0.95);
+ }
+
+ 
+.button-styles{
+  background: linear-gradient(to right,#3ecb87 ,#10af62);
+  // background-color: #10af62;
+  color: #fff;
+  // font-family: Trebuchet MS;
+  font-size: 16px;
+  font-weight: 500;
+  // font-style: italic;
+  text-decoration: none;
+  padding: 14px 15px;
+  // border: 0px solid #000;
+  border-radius: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .button-styles:hover{
+  background: linear-gradient(to right,#10af62,#3ecb87);
+  background-color: #10af62;
+ }
+ .button-styles:active{
+  transform: scale(0.95);
+ }
+
+ .tags{
+  margin:5px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  width: 70%;
+  min-width: 80%;
+  border: 1px rgb(173, 162, 162) solid;
+  border-radius: 5px;
+  color: black;
+}
+
+.single-tag{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 7px 0px 7px 7px;
+  padding: 1px;
+  border: 1px solid rgb(203 213 225);
+  border-radius: 5px;
+  white-space: nowrap;
+  color: #848f9f;
+}
+
+*{
+  overflow-wrap: break-word;
+}
+
+*::-webkit-scrollbar {
+  width: 5px !important;
+  height:5px !important;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #f1eeee;
+}
+ 
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: #f87171 !important;
+  border-radius: 999px;
+}
+
+.input-phone-number input:focus{
+  outline: none !important;
+  border:none !important;
+  box-shadow: none !important;
+}
+
+.inputStyle {
+  width: 50% !important;
+  height: 55px;
+  border-radius: 7px;
+  border: 0px;
+  margin-left: 8px;
+  margin-right: 8px;
+  background: #e6e4e4;
+  font-size: 20px;
+}
+
+.inputStyle:focus{
+  outline-width: 2px;
+  caret-color: #ff5862;
+  outline-color: #ff5862;
+}
+
+@layer components {
+  @import "components/table.scss";
+  @import "components/map.scss";
+  @import "components/progress";
+  @import "components/tippy";
+  @import "components/swiper";
+  @import "components/alert";
+  @import "components/card";
+  @import "components/auth";
+  @import "components/button";
+  @import "components/badge";
+  @import "components/typography";
+  @import "components/form";
+  @import "components/input-group";
+  @import "components/react-select";
+  @import "components/pagination";
+  @import "components/breadcrumbs";
+  @import "layout/header";
+  @import "layout/footer";
+  @import "layout/sidebar";
+  @import "layout/settings";
+  @import "utility/mix";
+  @import "utility/loading";
+  @import "utility/css-animation";
+  @import "utility/calander";
+  @import "utility/full-calender";
+  @import "components/print.scss";
+}
+@layer utilities {
+}
